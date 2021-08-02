@@ -18,7 +18,10 @@ const App = () => {
         }
     ])
 
-    const renderTitleCards = () => titles.map(({title, trackList}, index) => <Album key={index} title={title} trackList={trackList}/>);
+    const renderTitleCards = () => titles.map(({title, trackList}, index) => {
+    return <Album key={index} title={title} trackList={trackList}/>
+    }
+    );
 
     return (
       <main>
