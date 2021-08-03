@@ -1,5 +1,6 @@
 import React from 'react';
 import { Track } from '../../components';
+import './style.css';
 
 export default ({ title, trackList }) => {
 	return (

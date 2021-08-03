@@ -1,3 +1,4 @@
+import './style.css';
 import React, { useState } from 'react';
 
 export default ({ title }) => {
@@ -8,12 +9,8 @@ export default ({ title }) => {
 
 	const titleStyle = {
 		backgroundColor: !liked ? '#f5f5f5' : '#8aff8a',
-		display: 'block',
-		padding: '0.5rem',
-		width: 'fit-content',
 		color: !liked ? 'black' : 'white',
 		fontWeight: !liked ? 'normal' : 'bold',
-		borderRadius: '10px',
 	};
 
 	return (
