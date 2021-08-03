@@ -17,7 +17,7 @@ const Track = ({ title }) => {
     }
 
     return (
-        <li><p style={titleStyle}>{title}</p><button onClick={handleLikeButtonClick}>{liked? 'UNLIKE' : 'LIKE'}</button></li>
+        <li><p role='heading' style={titleStyle}>{title}</p><button onClick={handleLikeButtonClick}>{liked? 'UNLIKE' : 'LIKE'}</button></li>
     )
 }
 
