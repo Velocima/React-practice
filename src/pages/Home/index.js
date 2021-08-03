@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Album } from '../../layout';
+import { Greeting } from '../../components';
 
 export default () => {
 	const [titles, setTitles] = useState([
@@ -26,6 +27,7 @@ export default () => {
 		<main>
 			<h1>Kevin Penkin</h1>
 			{renderTitleCards()}
+			<Greeting />
 		</main>
 	);
 };
