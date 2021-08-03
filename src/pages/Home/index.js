@@ -1,31 +1,31 @@
-import React, {useState} from 'react';
-import Album from '../../components/Album';
+import React, { useState } from 'react';
+import { Album } from '../../layout';
 
 export default () => {
-    const [titles, setTitles] = useState([
-        {
-            title: "Made in Abyss: Dawn of the deep soul",
-            trackList: ["Echoes", "Faith"],
-        },
-        {
-            title: "Made in Abyss: Journey's Dawn",
-            trackList: ["Made in Abyss", "Days in the Sun"]
-        },
-        {
-        title: "Rising of the shield hero",
-        trackList: ["Melty", "Preparations"]
-        }
-    ])
+	const [titles, setTitles] = useState([
+		{
+			title: 'Made in Abyss: Dawn of the deep soul',
+			trackList: ['Echoes', 'Faith'],
+		},
+		{
+			title: "Made in Abyss: Journey's Dawn",
+			trackList: ['Made in Abyss', 'Days in the Sun'],
+		},
+		{
+			title: 'Rising of the shield hero',
+			trackList: ['Melty', 'Preparations'],
+		},
+	]);
 
-    const renderTitleCards = () => titles.map(({title, trackList}, index) => {
-    return <Album key={index} title={title} trackList={trackList}/>
-    }
-    );
+	const renderTitleCards = () =>
+		titles.map(({ title, trackList }, index) => {
+			return <Album key={index} title={title} trackList={trackList} />;
+		});
 
-    return (
-      <main>
-          <h1>Kevin Penkin</h1>
-          {renderTitleCards()}
-      </main>  
-    )
-}
+	return (
+		<main>
+			<h1>Kevin Penkin</h1>
+			{renderTitleCards()}
+		</main>
+	);
+};

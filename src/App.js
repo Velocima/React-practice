@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Home } from './pages'; // targets index.js automatically
 
-
 const App = () => {
-    return (
-        <Home/>
-    )
-
-}
+	return <Home />;
+};
 
 export default App;
