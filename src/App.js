@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
-import { Home } from './pages'; // targets index.js automatically
+import { Switch, Route } from 'react-router-dom';
+import { Home, NotFound } from './pages'; // targets index.js automatically
 import './style.css';
 
 const App = () => {
-	return <Home />;
+	return (
+		<Switch>
+			<Route exact path='/'>
+				<Home />
+			</Route>
+			<Route>
+				<NotFound />
+			</Route>
+		</Switch>
+	);
 };
 
 export default App;
