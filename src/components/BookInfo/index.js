@@ -4,18 +4,24 @@ import './style.css';
 
 export default () => {
 	const [book, setBook] = useState();
+	const [error, setError] = useState();
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const { data } = await axios.get('https://openlibrary.org/works/OL45883W.json');
-				console.log(data);
 				setBook(data);
+				setError(null);
 			} catch (err) {
-				console.error(err);
+				setError(err.message);
 			}
 		};
 		fetchData();
 	}, []);
-	return <div className='book-description'>{book ? book.description : ''}</div>;
+	return (
+		<div className='book-description' role='article'>
+			{error ? error : ''}
+			{book ? book.description : 'Loading...'}
+		</div>
+	);
 };
