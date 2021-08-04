@@ -1,3 +1,4 @@
+export { default as KevinPenkin } from './KevinPenkin';
 export { default as Home } from './Home';
 export { default as NotFound } from './NotFound';
 // This is an "aggregator" file

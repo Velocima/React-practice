@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, NotFound } from './pages'; // targets index.js automatically
+import { Home, NotFound, KevinPenkin } from './pages'; // targets index.js automatically
 import './style.css';
 
 const App = () => {
@@ -8,6 +8,9 @@ const App = () => {
 		<Switch>
 			<Route exact path='/'>
 				<Home />
+			</Route>
+			<Route exact path='/kevin_penkin'>
+				<KevinPenkin />
 			</Route>
 			<Route>
 				<NotFound />

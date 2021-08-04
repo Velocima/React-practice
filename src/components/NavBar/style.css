@@ -1,0 +1,13 @@
+a {
+	margin: 20px;
+}
+
+a:visited {
+	color: inherit;
+}
+
+.selected,
+.selected:visited {
+	color: rgb(63, 11, 11);
+	font-style: italic;
+}
