@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Album } from '../../layout';
-import { Greeting } from '../../components';
+import { Greeting, BookInfo } from '../../components';
 import './style.css';
 
 export default () => {
@@ -28,6 +28,7 @@ export default () => {
 		<main>
 			<h1>Kevin Penkin</h1>
 			{renderTitleCards()}
+			<BookInfo />
 			<Greeting />
 		</main>
 	);
